@@ -1,0 +1,8 @@
+{
+  "name": "trip_diary",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
