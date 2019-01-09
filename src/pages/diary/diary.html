@@ -1,0 +1,37 @@
+<!--
+  Generated template for the DiaryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{items.name}}</ion-title>
+
+    <ion-buttons end> 
+      <button ion-button icon-only (click)="facebookShare()"> 
+        <ion-icon name="logo-facebook"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <div *ngFor="let item of itemList">
+    <img src="{{item.image_url}}">
+    <div style="white-space: pre-wrap;">
+      {{item.description}}
+    </div>
+  </div>
+
+  <ion-fab right bottom *ngIf='isPreview'>
+    <button (click)="saveYourDiary()" ion-fab color="primary">
+      <ion-icon name="checkmark"></ion-icon>
+    </button>
+  </ion-fab>
+
+</ion-content>
